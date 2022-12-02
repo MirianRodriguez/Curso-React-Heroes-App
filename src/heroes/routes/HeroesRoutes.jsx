@@ -8,14 +8,14 @@ export const HeroesRoutes = () => {
     <>
         <Navbar/>
 
-        <div>
+        <div className="container mt-5">
           <Routes>
               <Route path='marvel' element={<MarvelPage/>}/>
               <Route path='dc' element={<DcPage/>}/>
               <Route path='search' element={<SearchPage/>}/>
               {/* usamos un comodín para recibir argumentos por la url */}
               <Route path='hero/:id' element={<HeroPage/>}/>
-              <Route path='/' element={<Navigate to='login'/>}/>
+              <Route path='/*' element={<Navigate to='marvel'/>}/>
           </Routes>
         </div>
     </>
